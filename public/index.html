@@ -16,19 +16,31 @@
         height: 109px;
     }
  
+ 
 </style>
 <body class="bg-primary items-center justify-center ">
+    
 <!-- header -->
 <header class="flex justify-center  bg-secondary items-center rounded-b-lg">
 <h3 class="text-white text-center">Create new chatroom</h3>
 </header>
 <!-- end header -->
-<div class=" bg-blue-100 p-4 flex flex-col align-middle items-center flex">
-    <input class=" text-gray-700 bg-gray-400 px-4 py-2 mt-2 rounded-lg w-375 " type="text" placeholder="Chatroom name">
-    <input class=" text-gray-700 bg-gray-400 px-4 py-2 mt-3 rounded-lg w-375" type="text" placeholder="#members">
-    <input class=" text-gray-700 bg-gray-400 px-4 py-2 mt-3 rounded-lg w-375" type="text" placeholder="Chatroom name">
+<div class="p-4 flex flex-col align-middle items-center ">
+    <input class="bg-input text-input-passive px-4 py-2 mt-6 rounded-lg w-375" type="text" placeholder="Chatroom name">
+    <input class="bg-input text-input-passive px-4 py-2 mt-4 rounded-lg w-375" type="text" placeholder="#members">
+    <input class="bg-input text-input-passive px-4 py-2 mt-4 rounded-lg w-375 shadow-3xl" type="text" placeholder="Invite People">
+    
+    <ul class="flex flex-col w-375">
+        <li><button class="rounded-b-lg bg-input text-left w-375 text-white px-4 py-2">Hidde Glansdorp</button></li>
+        <li><button class="rounded-b-lg bg-input text-left w-375 text-white px-4 py-2">Koen borghols</button></li>
+    </ul>   
+    
 </div>
-
+<div class="flex justify-center">
+      <button class="w-375 bg-custom-blue hover:bg-blue-700 px-4 py-2  rounded-lg text-white hover:bg-blue-700" >Create</button>
+   
+  </div>
+<!-- <button class="flex rounded-lg py-2 px-4 bg-blue  items-center justify-center  w-375">Create</button> -->
 
 
 

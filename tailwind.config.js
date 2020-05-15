@@ -10,6 +10,9 @@ module.exports = {
     borderRadius:{
       'lg': '5rem'
     },
+    boxShadow: {
+      '3xl': '0 35px 60px -15px rgba(0, 0, 0, 0.5)',
+    },
     fontFamily: {
       display: ['Gilroy', 'sans-serif'],
       body: ['Graphik', 'sans-serif'],
@@ -25,7 +28,8 @@ module.exports = {
         'primary': '#292929',
         'secondary': '#1F1F1F',
         'input': '#3C3C3C',
-        'blue': '#007EF4',
+        'custom-blue': '#007EF4',
+        'input-passive': '#CCCCCC',
       },
       spacing: {
         '96': '24rem',
