@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="375" height="109" viewBox="0 0 375 109">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="bg" d="M0,0H375a0,0,0,0,1,0,0V79a30,30,0,0,1-30,30H30A30,30,0,0,1,0,79V0A0,0,0,0,1,0,0Z" fill="#1f1f1f"/>
+    </clipPath>
+  </defs>
+</svg>
