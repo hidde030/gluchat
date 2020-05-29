@@ -1,0 +1,99 @@
+.w-375 {
+    max-width: 375px;
+    width: 100%;
+}
+
+header {
+    height: 109px;
+}
+body{
+    /* zorgt ervoor dat je geen scrollbar heeft om body */
+    overflow-y: hidden
+}
+.chat-container {
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
+
+.chat {
+
+    position: relative;
+ 
+    overflow: hidden;
+    width: 100%;
+    min-width: 200px;
+}
+
+
+
+
+.chat-list {
+    height: 80vh;
+    /* overflow-y: scroll; */
+    /* scrollbar moet ik nog testen of mobiel of die nog scrollt als ik overflow-y uit zet */
+    overflow-x: hidden;
+}
+
+.message-form {
+    display: flex;
+    width: 100%;
+    bottom: 0;
+}
+
+.message-info {
+    text-align: center;
+    color: #fff;
+    font-size: .8rem;
+    background-color: #888;
+    width: 150px;
+    border-radius: 30px;
+    margin: 10px auto;
+}
+
+.message {
+    position: relative;
+    display: block;
+    background-color: #454545;
+    padding: 10px 20px;
+    border-radius: 4px;
+    margin: 10px;
+    color: white;
+    width: 264px;
+    height: 87px;
+}
+
+.message-self {
+    background-color: #007EF4;
+    color: #fff;
+    margin-left: auto;
+}
+
+.message-username {
+    font-size: .8rem;
+}
+
+.message-text {
+    display: block;
+    padding: 10px;
+}
+
+
+.message-input {
+    flex: 3;
+    padding: 0 5px;
+}
+
+
+
+
+@media screen and (max-width: 600px) {
+    .chat {
+        width: 100vw;
+    }
+}
+/* message  holder */
+.holder {
+    margin: 0 auto;
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Message</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/message.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+</head>
+<style>
+  .w-375 {
+    max-width: 375px;
+    width: 100%;
+  }
+
+  header {
+    height: 109px;
+  }
+</style>
+
+<body class="bg-primary">
+  <!-- header -->
+  <header class="flex justify-center bg-secondary rounded-b-lg flex-col">
+
+    <div class="flex w-1/3 pl-10 absolute pt-2">
+
+      <svg xmlns="http://www.w3.org/2000/svg" width="10.414" height="18.828" viewBox="0 0 10.414 18.828">
+        <path id="chevron-left" d="M17,22,9,14l8-8" transform="translate(-8 -4.586)" fill="none" stroke="#fff"
+          stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+      </svg>
+    </div>
+    <h3 class="text-white text-center ">Roomname</h3>
+
+    <p class="text-white text-center font-thin">#nickname</p>
+  </header>
+  <!-- end header -->
+  <!-- chat container -->
+  <section class="chat-container" id="chat-container">
+    <div class="chat">
+     <ul class="chat-list" id="chat-list">
+        <li class="message message-self bg-custom-blue">
+          <span class="message-username">
+            <span class="message-username">
+              <i class="fa fa-user"></i>
+              {USERNAME}</span>
+          </span>
+          <span class="message-text">dw</span>
+        </li>
+        <li class="message ">
+          <span class="message-username">
+            <span class="message-username">
+              <i class="fa fa-user"></i>
+              {USERNAME}</span>
+          </span>
+          <span class="message-text">d</span>
+        </li>
+      </ul>
+
+   
+      <footer>
+        <section id="bottom-navigation" class="block fixed inset-x-0 bottom-0 z-10 bg-white shadow rounded-t-lg bg-secondary h-px-110">
+          <div id="tabs" class="flex justify-between">
+
+            <!-- message holder -->
+            <div class="flex holder bg-input text-input-passive px-3 py-2 mt-6 rounded-lg w-375 align-middle items-center justify-center">
+              <form action="#" class="flex h-7 ">
+                <input class="bg-input w-5/6" type="text" placeholder="Type your message" autocomplete="off">
+                <button type="submit" class="btn btn-search h-5 w-5 justify-end justify-end mb-5 ">
+                  <i class="fa fa-paper-plane bg-custom-blue p-3 rounded-lg fa-sm "></i>
+                </button>
+              </form>
+            </div>
+            <!-- end message holder -->
+          </div>
+          <!-- chat-container -->
+        </section>
+      </footer>
+      <!-- end bottom navigation -->
+    </div>
+  </section>
+</body>
+
+</html>

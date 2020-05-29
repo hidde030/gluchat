@@ -1,2 +1,4 @@
 https://github.com/jellevanamersfoort/chatapp
 https://github.com/Alphaegen/GLUChapp
+https://github.com/Stroomer/chatapp
+https://github.com/Keun/chatroom-glu
