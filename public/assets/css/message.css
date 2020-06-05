@@ -11,23 +11,12 @@ body{
     overflow-y: hidden
 }
 .chat-container {
-    display: flex;
+
     overflow: hidden;
     justify-content: center;
     align-items: center;
+    
 }
-
-.chat {
-
-    position: relative;
- 
-    overflow: hidden;
-    width: 100%;
-    min-width: 200px;
-}
-
-
-
 
 .chat-list {
     height: 80vh;
@@ -53,6 +42,7 @@ body{
 }
 
 .message {
+    
     position: relative;
     display: block;
     background-color: #454545;
@@ -76,9 +66,20 @@ body{
 
 .message-text {
     display: block;
-    padding: 10px;
+    padding: 5px;
 }
-
+.message-time {
+    position: absolute;
+    left: 190px;
+    bottom: 5px;
+   
+    
+}
+.room-item:hover{
+    cursor: pointer;
+    background-color: #707070;
+    transition: .5s;
+}
 
 .message-input {
     flex: 3;
@@ -88,12 +89,35 @@ body{
 
 
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1024px) {
     .chat {
         width: 100vw;
+    }
+    .mobile-input{
+        display: none;
+    }
+    .room-item:hover {
+        cursor: pointer;
+        background-color: #1F1F1F;
+        transition: .5s;
+    }.room-item{
+        background-color: #2B2B2B;
     }
 }
 /* message  holder */
 .holder {
     margin: 0 auto;
 }
+/* @media screen and (min-width: 768px) {
+ 
+    .chat-container {
+   
+  
+        
+        display: flex;
+        overflow: hidden;
+
+        align-items: center;
+        
+    }
+} */

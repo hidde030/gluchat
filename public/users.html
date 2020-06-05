@@ -1,11 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Userlist</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/users.css">
 </head>
-<body>
+<style>
+    header {
+        min-height: 109px;
+    }
+</style>
+
+<body class="bg-primary items-center justify-center lg:bg-gray-400">
+    <div class="lg:bg-rooms-large test">
+        <header class="flex justify-center bg-secondary rounded-b-lg flex-col min-w-full">
+
+            <h3 class="text-white text-center ">Users</h3>
+
+            <p class="text-white text-center font-thin">#nickname</p>
+           
+        </header>
+    </div>
+
+
+    <nav class="lg:block bg-rooms-large lg:w-1/4 lg:min-h-screen w-0 lg:float-left">
+        <h2 class="text-white font-medium text-2xl hidden lg:flex lg:justify-center lg:align-middle">54 Users Online</h2>
+    </nav>
+    <main class="flex align-middle  justify-center lg:justify-start m-10">
+        <ul class="flex flex-col  status text-white lg:text-black  lg:float-left  statuscontainer  ">
+            <!-- eerste heeft mt-10 ander mt-5 op mobiel-->
+            <li class="flex justify-center lg:justify-start h-7  flex-wrap ">
+                <span class="status "><img src="./assets/img/status.png" alt="status" srcset="" class="mt-1"></span>
+                <span class="name block flex-1 ml-2 ">MangoManny</span>
+                <span class="room text-status">Chillout place</span>
+            </li>
+            <li class="flex justify-center lg:justify-start h-7  flex-wrap ">
+                <span class="status "><img src="./assets/img/status.png" alt="status" srcset="" class="mt-1"></span>
+                <span class="name block flex-1 ml-2">name</span>
+                <span class="room text-status">room</span>
+            </li>
+            <li class="flex justify-center lg:justify-start h-7  flex-wrap ">
+                <span class="status "><img src="./assets/img/status-2.png" alt="status" srcset="" class="mt-1"></span>
+                <span class="name block flex-1 ml-2 ">name</span>
+                <span class="room text-status">room</span>
+            </li>
+            <li class="flex justify-center lg:justify-start h-7  flex-wrap ">
+                <span class="status "><img src="./assets/img/status-1.png" alt="status" srcset="" class="mt-1"></span>
+                <span class="name block flex-1 ml-2 ">name</span>
+                <span class="room text-status">room</span>
+            </li>
     
+            
+
+        </ul>
+    </main>
 </body>
+
 </html>

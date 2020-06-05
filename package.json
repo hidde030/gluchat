@@ -1,19 +1,21 @@
 {
-  "name": "chatter",
+  "name": "Chat-Project",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "nodemon ./index.js --exec",
     "start-dev": "nodemon ./index.js --exec babel-node -e js",
-    "test": "DEBUG=* nodemon ./index.js --exec babel-node -e js"
+    "test": "DEBUG=* nodemon ./index.js --exec babel-node -e js",
+    "build:css": "tailwind build src/style.css -o public/assets/css/style.css"
   },
   "author": "Hidde Glansdorp",
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.2",
     "nodemon": "^1.12.1",
-    "socket.io": "^2.0.3"
+    "socket.io": "^2.0.3",
+    "tailwindcss": "^1.4.6"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

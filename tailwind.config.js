@@ -1,7 +1,7 @@
 module.exports = {
   theme: {
     screens: {
-      smm: '375px', 
+      smm: '300px', 
       sm: '640px',
       md: '768px',
       lg: '1024px',
@@ -30,6 +30,11 @@ module.exports = {
         'input': '#3C3C3C',
         'custom-blue': '#007EF4',
         'input-passive': '#CCCCCC',
+        'zijkant': '#707070',
+       'status' :'#494949',
+       'rooms-large' :'#3E3E3E'
+       
+
       },
       spacing: {
         '96': '24rem',
