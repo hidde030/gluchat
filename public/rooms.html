@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>rooms</title>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
     <!-- <link defer rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"> -->
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/room.css">
-    <link rel="stylesheet" href="./assets/css/message.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/room.css">
+    <link rel="stylesheet" href="/assets/css/message.css">
 
 </head>
 
@@ -25,16 +26,20 @@
     <section class="rooms-container lg:block lg:float-left lg:w-1/4 lg:bg-rooms-large lg:min-h-screen p-6" id="rooms-container">
         <div>
             <ul class="rooms-list w-375 " id="rooms-list">
+                <a href="/hidde">
                 <li id="Socket.io" class="room-item lg:bg-custom-blue " role="button">
                     <span class="room-name">Socket.io</span>
                     <span class="room-users">0 <i class="fa fa-users"></i></span>
                     <span class="last-massage">Don’t worry, be chatty</span>
+                </a>
                 </li>
+                <a href="/thomas">
                 <li id="Socket.io" class="room-item" role="button">
                     <span class="room-name">room</span>
                     <span class="room-users">0 <i class="fa fa-users"></i></span>
                     <span class="last-massage">Don’t worry, be chatty</span>
                 </li>
+                    </a>
                 <li id="Socket.io" class="room-item" role="button">
                     <span class="room-name">room</span>
                     <span class="room-users">0 <i class="fa fa-users"></i></span>
@@ -56,7 +61,7 @@
         <section class="chat">
             <ul class="chat-list" id="chat-list">
                 <!-- row 1 send urself-->
-                <li class="message message-self bg-custom-blue">
+                <!-- <li class="message message-self bg-custom-blue">
                     <span class="message-username">
                         <span class="message-username">
                             <i class="fa fa-user"></i>
@@ -64,9 +69,9 @@
                     </span>
                     <span class="message-text">dw</span>
                     <span class="message-time">18:37</span>
-                </li>
+                </li> -->
                 <!-- row 2 other users -->
-                <li class="message ">
+                <!-- <li class="message ">
                     <span class="message-username">
                         <span class="message-username">
                             <i class="fa fa-user"></i>
@@ -74,7 +79,7 @@
                     </span>
                     <span class="message-text">d</span>
                     <span class="message-time">18:37</span>
-                </li>
+                </li> -->
             </ul>
         </section>
     </section>
@@ -89,8 +94,8 @@
   
       
               <div class="flex holder bg-input text-input-passive px-3 py-2 mt-6 rounded-lg w-375 align-middle items-center justify-center">
-                <form action="#" class="flex h-7 ">
-                  <input class="bg-input w-5/6" type="text" placeholder="Type your message" autocomplete="off">
+                <form action="" class="flex h-7 ">
+                  <input id="m" class="bg-input w-5/6" type="text" placeholder="Type your message" autocomplete="off">
                   <button type="submit" class="btn btn-search h-5 w-5 justify-end mb-5 ">
                     <i class="fa fa-paper-plane bg-custom-blue p-3 rounded-lg fa-sm "></i>
                   </button>
@@ -178,9 +183,38 @@
     <!-- footer message page -->
 
 
-
+    <script src="/socket.io/socket.io.js"></script>
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script src="./assets/js/index.js" ></script>
+    <script src="/assets/js/index.js" ></script>
+    <script>
+        const room = 'hidde';
+      const socket = io('/rooms');
+      $('form').submit(() => {
+        let msg = $('#m'). val();
+        socket.emit('message', {msg, room});
+
+        $('#m').val('');
+        return false;
+      });
+      const test = 'thomas';
+      const Newsocket = io('/thomas');
+      $('form').submit(() => {
+        let msg = $('#m'). val();
+        Newsocket.emit('message', {msg, test});
+        
+        $('#m').val('');
+        return false;
+      });
+
+
+      socket.on('connect',()=>{
+          socket.emit('join',{ room:room })
+      })
+
+      socket.on('message', (msg) => {
+        $('#chat-list').append($('<li>').text(msg));
+      });
+    </script>
 </body>
 
 </html> 
