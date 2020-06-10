@@ -1,0 +1,62 @@
+
+.w-375 {
+    max-width: 375px;
+    width: 100%;
+}
+
+header {
+    height: 109px;
+}
+footer{
+    height: 107px;
+}
+
+/* begin roomlist */
+.rooms-container {
+    /* display: none; */
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+
+}
+
+
+.rooms-list {
+    display: block;
+    /* display: flex; */
+    flex-wrap: wrap;
+    justify-content: center;
+
+    margin: 0 auto;
+}
+
+.room-item {
+    margin: 2px;
+    position: relative;
+    padding: 10px 10px;
+    border-radius: 10px;
+    border-bottom-right-radius: 0;
+}
+
+
+
+.room-name {
+    display: block;
+    text-align: left;
+    font-size: 16px;
+}
+
+.room-users {
+    position: absolute;
+    bottom: 23px;
+    right: 15px;
+}
+.last-massage{
+    display: block;
+    text-align: left;
+    font-size: 15px;   
+    color: #5F5F5F;
+}
+/* end users list */
+/* styles room end */
