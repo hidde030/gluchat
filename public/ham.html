@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/test.css">
+</head>
+
+<body class="bg-primary">
+    <!-- hamburger menu -->
+    <nav class="flex items-center justify-between flex-wrap  p-6 fixed w-full z-10 top-0">
+        <!-- useless div hold -->
+        <div class="flex flex-shrink-0 text-white mr-6">
+
+        </div>
+        <!-- end -->
+        <div class="block lg:hidden">
+            <!-- <button id="nav-toggle"  class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-white hover:border-white"> -->
+            <button id="nav-toggle" class="border-none">
+                <div id="hamburger" class="hamburglar is-open">
+                    <div class="burger-icon">
+                        <div class="burger-container">
+                            <span class="burger-bun-top"></span>
+                            <span class="burger-filling"></span>
+                            <span class="burger-bun-bot"></span>
+                        </div>
+                    </div>
+                </div>
+            </button>
+            <!-- </button> -->
+
+        </div>
+
+        <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block pt-6 lg:pt-0" id="nav-content">
+            <ul class="list-reset lg:flex justify-end flex-1 items-center ">
+
+
+                <li class="mr-3  bg-custom-blue ">
+                    <a class="inline-block border border-white rounded hover:border-gray-200 text-blue-500 bg-custom-blue py-1 px-3"
+                        href="#">Pill</a>
+                </li>
+                <li class="mr-3  bg-custom-blue ">
+                    <a class="inline-block border border-white rounded hover:border-gray-200 text-blue-500 bg-custom-blue py-1 px-3"
+                        href="#">Pill</a>
+                </li>
+                <li class="mr-3  bg-custom-blue ">
+                    <a class="inline-block border border-white rounded hover:border-gray-200 text-blue-500 bg-custom-blue py-1 px-3"
+                        href="#">Pill</a>
+                </li>
+                <li class="mr-3  bg-custom-blue ">
+                    <a class="inline-block border  rounded hover:border-gray-200 text-blue-500  bg-custom-blue  py-1 px-3"
+                        href="#">Pill</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <!-- end hamburger menu -->
+    <script>
+        // toggle menu content <ul>
+        document.getElementById('nav-toggle').onclick = function () {
+            document.getElementById("nav-content").classList.toggle("hidden");
+        }
+        $("document").ready(function () {
+            var trigger = $("#hamburger"),
+                isClosed = true;
+
+            trigger.click(function () {
+                burgerTime();
+            });
+
+            function burgerTime() {
+                if (isClosed == true) {
+                    trigger.removeClass("is-open");
+                    trigger.addClass("is-closed");
+                    isClosed = false;
+                } else {
+                    trigger.removeClass("is-closed");
+                    trigger.addClass("is-open");
+                    isClosed = true;
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
