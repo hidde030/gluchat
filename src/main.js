@@ -77,7 +77,17 @@ $( document ).ready( () => {
         window.location.href = '/test';
     });
 
-
+    $('#home').on('click', () => {
+        location.href = '/'    
+    });
+    $('#users').on('click', () =>{
+        location.href = '/users'    
+    });
+    $('#room').on('click', () => {
+        location.href = '/rooms'    
+    });
+   
+   
     if (window.innerWidth < 1024) {
         $( ".room-item" ).click( () => {
           $( "#rooms-container" ).fadeOut( 0, () => {
@@ -100,7 +110,39 @@ $( document ).ready( () => {
             });
         });
 
+        var trigger = $("#hamburger"),
+            isClosed = false;
 
+        trigger.click(function () {
+            burgerTime();
+        });
+
+        function burgerTime() {
+            if (isClosed == true) {
+                trigger.removeClass("is-open");
+                trigger.addClass("is-closed");
+                isClosed = false;
+            } else {
+                trigger.removeClass("is-closed");
+                trigger.addClass("is-open");
+                isClosed = true;
+            }
+        }
         
 
 });
+$(".navigation li a").on('click', function (e) {
+    e.preventDefault();
+    $(".navigation li a.active").removeClass("active");
+    $(this).addClass("active");
+    // $(activeTab).show();
+    return false;
+});
+      // toggle menu content <ul>
+      document.getElementById('nav-toggle').onclick = function () {
+        document.getElementById("nav-content").classList.toggle("hidden");
+    }
+  
+
+  
+   

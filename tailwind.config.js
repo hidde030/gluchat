@@ -7,6 +7,12 @@ module.exports = {
       lg: '1024px',
       xl: '1280px',
     },
+    fill: theme => ({
+           'black': theme('colors.black')
+     }),
+
+
+
     borderRadius:{
       'lg': '5rem'
     },
@@ -33,14 +39,13 @@ module.exports = {
         'zijkant': '#707070',
        'status' :'#494949',
        'rooms-large' :'#3E3E3E'
-       
-
       },
       spacing: {
         '96': '24rem',
         '128': '32rem',
-      }
+      } 
     }
+    
   }
 }
             

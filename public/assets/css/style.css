@@ -13862,8 +13862,8 @@ video {
   box-shadow: 0 35px 60px -15px rgba(0, 0, 0, 0.5);
 }
 
-.fill-current {
-  fill: currentColor;
+.fill-black {
+  fill: #000;
 }
 
 .stroke-current {
@@ -32018,8 +32018,8 @@ video {
     box-shadow: 0 35px 60px -15px rgba(0, 0, 0, 0.5);
   }
 
-  .smm\:fill-current {
-    fill: currentColor;
+  .smm\:fill-black {
+    fill: #000;
   }
 
   .smm\:stroke-current {
@@ -50175,8 +50175,8 @@ video {
     box-shadow: 0 35px 60px -15px rgba(0, 0, 0, 0.5);
   }
 
-  .sm\:fill-current {
-    fill: currentColor;
+  .sm\:fill-black {
+    fill: #000;
   }
 
   .sm\:stroke-current {
@@ -68332,8 +68332,8 @@ video {
     box-shadow: 0 35px 60px -15px rgba(0, 0, 0, 0.5);
   }
 
-  .md\:fill-current {
-    fill: currentColor;
+  .md\:fill-black {
+    fill: #000;
   }
 
   .md\:stroke-current {
@@ -86489,8 +86489,8 @@ video {
     box-shadow: 0 35px 60px -15px rgba(0, 0, 0, 0.5);
   }
 
-  .lg\:fill-current {
-    fill: currentColor;
+  .lg\:fill-black {
+    fill: #000;
   }
 
   .lg\:stroke-current {
@@ -104646,8 +104646,8 @@ video {
     box-shadow: 0 35px 60px -15px rgba(0, 0, 0, 0.5);
   }
 
-  .xl\:fill-current {
-    fill: currentColor;
+  .xl\:fill-black {
+    fill: #000;
   }
 
   .xl\:stroke-current {

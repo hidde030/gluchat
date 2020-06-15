@@ -6,12 +6,14 @@
     display: flex;
     max-width: 383px;
     width: 100%;
-   
+   margin: 40px;
 
 }
- li {
+
+#user li {
     list-style-image: url('../img/status.png');
     z-index: 999;
     list-style-position: inside;
   }
+  
     
