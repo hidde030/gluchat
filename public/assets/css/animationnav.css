@@ -13,7 +13,16 @@
         -ms-user-select: none;
             user-select: none;
   }
-  
+  .rond{
+    border-radius: 200px;
+  }.svg{
+  display: inline-block;
+ 
+  }
+  .active{
+    background-color: #fff;
+    color: #000000;
+  }
   .path-burger {
     position: absolute;
     top: 0;
