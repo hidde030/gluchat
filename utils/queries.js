@@ -38,6 +38,11 @@ const insertChats = (request) => {
       console.log(`Chat added to room: ${data.room}`);
     })
 }
+const getUsers = (request) => {
+    const data = request;
+
+    client.query('SELECT * FROM chats')
+}
 
 module.exports = {
     getChats,

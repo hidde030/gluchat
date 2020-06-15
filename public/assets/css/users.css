@@ -1,0 +1,17 @@
+.test{
+    background-color: none;
+}
+
+.statuscontainer{
+    display: flex;
+    max-width: 383px;
+    width: 100%;
+   
+
+}
+ li {
+    list-style-image: url('../img/status.png');
+    z-index: 999;
+    list-style-position: inside;
+  }
+    

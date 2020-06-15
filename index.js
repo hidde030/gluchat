@@ -35,6 +35,9 @@ app.get('/series-movies', (req, res) => {
 app.get('/sports', (req, res) => {
     res.sendFile(__dirname + '/public/rooms.html');
 });
+app.get('/users', (req, res) => {
+    res.sendFile(__dirname + '/public/users.html');
+});
 
 // tech namespace
 const tech = io.of('/tech');
@@ -46,7 +49,6 @@ tech.on('connection', (socket) => {
         db.getChats(data.room).then( val => {
             // console.log(val);
             tech.to(socket.id).emit('historyChats',val);
-
             tech.in(data.room).emit('singleMessage', `${data.user} joined ${data.room} room!`);
         });
 
