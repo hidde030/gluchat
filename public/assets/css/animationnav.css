@@ -29,6 +29,10 @@
     background-color: #fff;
     color: #000000;
   }
+  .active-rooms{
+    background-color: rgb(0, 126, 244);
+    color: white;
+  }
   .path-burger {
     position: absolute;
     top: 0;

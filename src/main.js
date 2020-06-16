@@ -138,6 +138,15 @@ $(".navigation li a").on('click', function (e) {
     // $(activeTab).show();
     return false;
 });
+// $("#rooms-container li").on('click', function (t) {
+//     t.preventDefault();
+//     $("#rooms-container li.active-rooms").removeClass("active-rooms");
+//     $(this).addClass("active-rooms");
+//     // $(activeTab).show();
+//     return false;
+// });
+
+
       // toggle menu content <ul>
       document.getElementById('nav-toggle').onclick = function () {
         document.getElementById("nav-content").classList.toggle("hidden");
