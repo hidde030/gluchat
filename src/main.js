@@ -1,4 +1,4 @@
-import 'bootstrap-sass';
+// import 'bootstrap-sass';
 import './scss/style.scss';
 
 var url = window.location.href;
