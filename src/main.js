@@ -59,6 +59,8 @@ if (isCurrentRoom) {
 
 $( document ).ready( () => {
     // $('.room-name').text(roomName);
+  
+  
     var title = $('title').html();
     $('title').html(title.replace("{{room}}",roomName));
 
@@ -138,17 +140,28 @@ $(".navigation li a").on('click', function (e) {
     // $(activeTab).show();
     return false;
 });
-// $("#rooms-container li").on('click', function (t) {
-//     t.preventDefault();
+// $("#rooms-container li").on('click', function () {
+
 //     $("#rooms-container li.active-rooms").removeClass("active-rooms");
 //     $(this).addClass("active-rooms");
 //     // $(activeTab).show();
 //     return false;
 // });
+// ("#rooms-container li").click(function() {
+//     $("#rooms-container li").removeClass('active-rooms');
+//     $(this).addClass('active-rooms');
+//   });
+
+// $(function() {
+//     $( 'ul#rooms-list li' ).on( 'click', function() {
+//           $( this ).parent().find( 'li.active-rooms' ).removeClass( 'active-rooms' );
+//           $( this ).addClass( 'active-rooms' );
+//     });
+// });
 
 
       // toggle menu content <ul>
-      document.getElementById('nav-toggle').onclick = function () {
+      document.getElementById('nav-toggle').onclick =  ()=>{
         document.getElementById("nav-content").classList.toggle("hidden");
     }
   

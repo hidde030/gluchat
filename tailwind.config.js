@@ -10,9 +10,6 @@ module.exports = {
     fill: theme => ({
            'black': theme('colors.black')
      }),
-
-
-
     borderRadius:{
       'lg': '5rem'
     },
