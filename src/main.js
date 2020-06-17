@@ -86,14 +86,26 @@ $( document ).ready( () => {
         location.href = '/users'    
     });
     $('#room').on('click', () => {
-        location.href = '/rooms'    
+        location.href = '/test'    
     });
-   
+    // $('.sports').on('click', () => {
+    //     location.href = '/sports'    
+    // });
+    // $('.test').on('click', () =>{
+    //     location.href = '/test'
+          
+    // });
+    // $('.series').on('click', () => {
+    //     location.href = '/series-movies'    
+    // });
+    // $('.night').on('click', () => {
+    //     location.href = '/rooms'    
+    // });
    
     if (window.innerWidth < 1024) {
         $( ".room-item" ).click( () => {
-          $( "#rooms-container" ).fadeOut( 0, () => {
-            event.preventDefault();
+          $( "#rooms-container" ).fadeOut( 0, (e) => {
+            event.preventDefault(e);
             $( ".fadeout" ).fadeOut(0)
             $(".chat-container").fadeIn(0)
             $(".chat-list").fadeIn(0)
@@ -101,7 +113,10 @@ $( document ).ready( () => {
             });
         });
         $(".chat-list").animate({ scrollTop: 20000000 }, "slow");
-      
+        $("#submit").click(() =>{
+            $('.chat-list').animate({
+                scrollTop: $('.chat-list')[0].scrollHeight}, "slow");
+        });
       }
         $(".chat-list").animate({ scrollTop: 20000000 }, "slow");
             
