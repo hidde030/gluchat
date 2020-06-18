@@ -38,13 +38,19 @@ const insertChats = (request) => {
       console.log(`Chat added to room: ${data.room}`);
     })
 }
-const getUsers = (request) => {
-    const data = request;
+const getUser = (user) => {
+    return new Promise((resolve, reject) => {
 
-    client.query('SELECT * FROM chats')
+        client.query(`SELECT * FROM chats WHERE user_name = '${user}' ORDER BY date_time ASC LIMIT 20`)
+            .then((result) => {
+                let data = result.rows;
+                resolve(data);
+            })
+            .catch((e) => console.error(e.stack));
+    })
 }
-
 module.exports = {
     getChats,
-    insertChats
+    insertChats,
+    getUser
 }

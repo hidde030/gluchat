@@ -1,0 +1,21 @@
+body {
+    background-color: #292929
+}
+
+.top-header {
+    background-color: #1f1f1f;
+    border-radius: 0 0 30px 30px;
+    color: #fff
+}
+
+a.list-group-item {
+    background-color: #292929;
+    border: 0;
+    color: #fff;
+    border-radius: 5px;
+    margin-bottom: 5px
+}
+
+a.list-group-item:hover {
+    background-color: #696969
+}
