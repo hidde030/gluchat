@@ -175,11 +175,11 @@ $(".navigation li a").on('click', function (e) {
 // });
 
 
-      // toggle menu content <ul>
-      document.getElementById('nav-toggle').onclick =  ()=>{
-        document.getElementById("nav-content").classList.toggle("hidden");
-    }
+ 
   
-
+    // toggle menu content <ul>
+    document.getElementById('nav-toggle').onclick =  ()=>{
+        document.getElementById("nav-content").classList.toggle("hidden");
+    } 
   
    

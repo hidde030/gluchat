@@ -5,27 +5,4 @@
 @import "_mixins";
 
  
-body{
-    background-color:$background;
-}
-
-.top-header{
-    background-color:$header;
-    border-radius:0 0 30px 30px;
-    color:$font-white;
-}
-
-
-
-a.list-group-item{
-    background-color: $background;
-    border:0;
-    color:$font-white;
-    border-radius: 5px;
-    margin-bottom:5px;
-
-    &:hover{
-        background-color:$hover;
-    }
-}
 

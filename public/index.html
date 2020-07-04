@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
     <title>Nickname</title>
     <style>
         .w-375 {
@@ -34,22 +35,58 @@
             margin-top: 3px;
     
         }
+        #contact label{
+                display: inline-block;
+                width: 100px;
+                text-align: right;
+            }
+            #contact_submit{
+                padding-left: 100px;
+            }
+            #contact div{
+                margin-top: 1em;
+            }
+            textarea{
+                vertical-align: top;
+                height: 5em;
+            }
+                
+            .error{
+                display: none;
+                margin-left: 10px;
+            }		
+            
+            .error_show{
+                color: red;
+                margin-left: 10px;
+            }
+            
+            input.invalid, textarea.invalid{
+                border: 2px solid red;
+            }
+            
+            input.valid, textarea.valid{
+                border: 2px solid green;
+            }
     </style>
+
+    
 </head>
 <body class="bg-primary items-center justify-center lg:bg-gray-400 ">
   
 
 
       <!-- header -->
-      <header class="flex justify-center  bg-secondary items-center rounded-b-lg">
-        <h3 class="text-white text-center">Create new chatroom</h3>
+      <header class="flex justify-center lg:justify-start bg-secondary items-center rounded-b-lg">
+          <div class="lg:w-1/12 "></div>
+        <h3 class="text-white text-center lg:text-left  lg:font-bold lg:text-3xl">Enter chatbox</h3>
     </header>
     <!-- end header -->
     <!-- nickname holder -->
     <div class="holder bg-input text-input-passive px-3 py-2 mt-6 rounded-lg w-375 flex-row lg:flex-col ">
-        <form class="flex ">
-            <input class="bg-input w-5/6 _userName" type="text" placeholder="Enter chatbox" aria-label="Nickname" aria-describedby="basic-addon2">
-            <button type="submit" class="_saveUserName btn btn-search h-4 w-5 justify-end justify-end mb-5 ">
+        <form class="flex " id="val">
+            <input class="bg-input w-11/12 _userName" type="text" placeholder="Enter chatbox" aria-label="Nickname" aria-describedby="basic-addon2">
+            <button type="submit" class="_saveUserName btn btn-search h-4 w-5 justify-end  mb-4 mr-3  ">
                 <i class="fa fa-search bg-custom-blue p-3 rounded-lg  "></i>
             </button>
         </form>
@@ -68,7 +105,7 @@
 
     <footer>
         <section id="bottom-navigation"
-            class="block fixed inset-x-0 bottom-0 z-10 bg-white shadow rounded-t-lg bg-secondary h-px-110">
+            class="block fixed inset-x-0 bottom-0 z-10  shadow rounded-t-lg bg-secondary h-px-110">
             <div id="tabs" class="flex justify-between">
 
                 <div class="h-20"></div>
