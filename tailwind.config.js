@@ -29,13 +29,14 @@ module.exports = {
     extend: {
       colors: {
         'primary': '#292929',
+        'main-content': '#606060',
         'secondary': '#1F1F1F',
         'input': '#3C3C3C',
         'custom-blue': '#007EF4',
         'input-passive': '#CCCCCC',
         'zijkant': '#707070',
        'status' :'#494949',
-       'rooms-large' :'#3E3E3E'
+       'rooms-large' :'#3E3E3E',
       },
       spacing: {
         '96': '24rem',

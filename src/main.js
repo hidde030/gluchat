@@ -30,10 +30,10 @@ if (isCurrentRoom) {
     socket.on('message', (data) => {
         let user = localStorage.getItem('userName');
         if(user == data.user){
-            $('#messages').append($('<li class="message message-self bg-custom-blue">'+ '<span class="message-username">'+ '<i class="fa fa-user">'+'</i> ' + data.user +'</span>'+ '<span class="message-text">'+  data.msg +'</span>'+ '<span class="message-time">'+data.time+ '</span>'+ '</li>'));
+            $('#messages').append($('<li class="message message-self bg-custom-blue">'+ '<div class="dot online lg:hidden">'+'</div>'+'<span class="message-username">' + data.user +'</span>' + '<span class="hidden lg:inline  said font-font-hairline text-opacity-75 text-xs">'+` Said @`+ data.time + '</span>' + '<span class="message-text">'+ data.msg +'</span>'+ '<span class="message-time lg:hidden">'+ data.time+ '</span>'+ '</li>'));
             
         }else{
-            $('#messages').append($('<li class="message">'+ '<span class="message-username">'+ '<i class="fa fa-user">'+'</i> ' + data.user +'</span>'+ '<span class="message-text">'+  data.msg +'</span>'+'<span class="message-time">'+data.time+ '</span>'+ '</li>'));
+            $('#messages').append($('<li class="message">'+'<div class="dot online lg:hidden">'+'</div>'+ '<span class="message-username">' + data.user +'</span>' + '<span class="hidden lg:inline  said font-font-hairline text-opacity-75 text-xs">'+` Said @`+ data.time + '</span>' + '<span class="message-text">'+ data.msg +'</span>'+ '<span class="message-time lg:hidden">'+ data.time+ '</span>'+ '</li>'));
         }
 
     });
@@ -48,9 +48,9 @@ if (isCurrentRoom) {
         for (var i = 0; i < data.length; i++) {
             if(user == data[i].user_name){
              
-                $('#messages').append($('<li class="message message-self bg-custom-blue">'+ '<span class="message-username">'+ '<i class="fa fa-user">'+'</i> ' + data[i].user_name  +'</span>'+ '<span class="message-text">'+   data[i].chat_text+'</span>'+'</li>'));
+                $('#messages').append($('<li class="message message-self bg-custom-blue">'+ '<div class="dot online lg:hidden">'+'</div>'+'<span class="message-username">' + data[i].user_name  +'</span>'+ '<span class="message-text">'+   data[i].chat_text+'</span>'+'</li>'));
             }else{
-                $('#messages').append($('<li class="message">'+ '<span class="message-username">'+ '<i class="fa fa-user">'+'</i> ' + data[i].user_name  +'</span>'+ '<span class="message-text">'+   data[i].chat_text+'</span>'+'</li>'));
+                $('#messages').append($('<li class="message">'+ '<div class="dot online lg:hidden">'+'</div>'+'<span class="message-username">' + data[i].user_name  +'</span>'+ '<span class="message-text">'+   data[i].chat_text+'</span>'+'</li>'));
             }
         }
 
@@ -110,6 +110,7 @@ $( document ).ready( () => {
             $(".chat-container").fadeIn(0)
             $(".chat-list").fadeIn(0)
             $(".mobile-input").fadeIn(0)
+            $(".said").fadeOut(0)
             });
         });
         $(".chat-list").animate({ scrollTop: 20000000 }, "slow");
@@ -178,8 +179,7 @@ $(".navigation li a").on('click', function (e) {
  
   
     // toggle menu content <ul>
-    document.getElementById('nav-toggle').onclick =  ()=>{
+
+    document.getElementById('nav-toggle').onclick =()=>{
         document.getElementById("nav-content").classList.toggle("hidden");
     } 
-  
-   

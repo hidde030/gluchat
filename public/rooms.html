@@ -13,11 +13,13 @@
     <title>Chatroom - {{room}}</title>
 </head>
 
-<body class="bg-primary items-center justify-center lg:bg-rooms-large">
+<body class="bg-primary items-center justify-center lg:bg-rooms-large ">
     <!-- header -->
     <header class="flex justify-center bg-secondary rounded-b-lg flex-col lg:text-left ">
+    <div class="lg:flex flex-wrap">
         <h3 class="text-white text-center lg:text-left lg:ml-10 lg:text-2xl">Chatrooms</h3>
-        <p class="text-white text-center font-thin lg:text-left lg:ml-10 lg:text-2xl">#nickname</p>
+        <p class="text-white lg:text-gray-700  text-center lg:text-left font-thin  lg:ml-2 lg:text-2xl" id="nickname">nickname</p>
+    </div>
     </header>
     <!-- end header -->
     <!-- hamburger menu -->
@@ -45,7 +47,7 @@
             <ul class="list-reset lg:flex justify-end flex-1 items-center ">
 
 
-                <li class="mr-3 bg-custom-blue lg:bg-transparent lg:w-32 lg:h-12 cursor-pointer">
+                <li class="mr-3 bg-custom-blue lg:bg-transparent lg:w-32 lg:h-12 cursor-pointer uppercase">
                     <a id="room"
                         class="inline-block hover:bg-white text-white hover:text-black bg-custom-blue py-2 px-3  rond lg:flex-1 w-full"
                         href="/rooms">Rooms
@@ -59,7 +61,7 @@
                     </a>
                 </li>
 
-                <li class="mr-3 bg-custom-blue lg:bg-transparent lg:w-32  lg:h-12 cursor-pointer">
+                <li class="mr-3 bg-custom-blue lg:bg-transparent lg:w-32  lg:h-12 cursor-pointer uppercase">
                     <a id="users"
                         class="inline-block hover:bg-white hover:text-black text-white bg-custom-blue py-2 px-3 rond lg:flex-1 w-full"
                         href="/users">Users
@@ -85,7 +87,7 @@
 
                     </a>
                 </li>
-                <li class="mr-3 bg-custom-blue lg:bg-transparent lg:w-32  lg:h-12  cursor-pointer">
+                <li class="mr-3 bg-custom-blue lg:bg-transparent lg:w-32  lg:h-12  cursor-pointer uppercase">
                     <a id="home"
                         class="inline-block hover:bg-white hover:text-black text-white bg-custom-blue py-2  px-3 rond lg:flex-1 w-full"
                         href="/">Quit
@@ -145,7 +147,7 @@
     <!--end room container-->
 
     <!-- chat container -->
-    <section class="chat-container lg:block hidden  lg:w-3/4 lg:float-left lg:bg-gray-400" id="chat-container">
+    <section class="chat-container lg:block hidden  lg:w-3/4 lg:float-left lg:bg-gray-300" id="chat-container">
         <section class="chat">
             <ul class="chat-list" id="messages">
 
@@ -157,19 +159,19 @@
 
     <!-- bottom navigation -->
     <footer>
-        <section id="bottom-navigation"
-            class="none fixed inset-x-0 bottom-0 z-10  shadow rounded-t-lg bg-secondary h-px-110  mobile-input lg:block shadow">
-            <div id="tabs" class="flex justify-between lg:m-8 m-6">
+        <section id="bottom-navigation" class="none fixed inset-x-0 bottom-0 z-10  shadow rounded-t-lg bg-secondary h-px-110  mobile-input lg:block shadow">
+            <div id="tabs" class="flex lg:justify-end  justify-center lg:m-8 m-6">
 
 
-                <div
-                    class="flex holder bg-input text-input-passive px-3 py-2 mt-6 rounded-lg w-375 align-middle items-center justify-center">
-                    <form action="" class="flex h-7 ">
-                        <input id="m" class="bg-input w-5/6" type="text" placeholder="Type your message"
+                <div class="flex   bg-input text-input-passive px-3 py-2 mt-6 rounded-lg   items-center justify-center  lg:w-3/5  w-3/4 ">
+                    <form action="" class="flex h-7 w-full">
+                        <input id="m" class="bg-input w-full pl-4  " type="text" placeholder="Type your message"
                             autocomplete="off">
-                        <button type="submit" id="submit" class="btn btn-search h-5 w-5 justify-end mb-5 ">
+                            <div class="flex justify-end">
+                        <button type="submit" id="submit" class="btn btn-search h-5 mb-5 ">
                             <i class="fa fa-paper-plane bg-custom-blue p-3 rounded-lg fa-sm "></i>
                         </button>
+                    </div>
 
                     </form>
 
@@ -178,8 +180,7 @@
             </div>
         </section>
 
-        <section id="bottom-navigation"
-            class="block none fixed inset-x-0 bottom-0 z-10 bg-white shadow rounded-t-lg bg-secondary h-px-110 fadeout lg:hidden">
+        <section id="bottom-navigation" class="block none fixed inset-x-0 bottom-0 z-10  shadow rounded-t-lg bg-secondary h-px-110 fadeout lg:hidden">
             <div id="tabs" class="flex justify-between  lg:m-8 m-6">
                 <a href="#"
                     class="w-full focus:text-blue hover:text-custom-blue justify-center inline-block text-center pt-2 pb-1 py-20">
@@ -256,10 +257,14 @@
     </footer>
     <!-- footer message page -->
 
-
+    <script>
+        let username = localStorage.getItem('userName');
+        document.getElementById('nickname').innerHTML = `#${username}`;
+</script>
     <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="/socket.io/socket.io.js"></script>
     <script src="assets/main.js"></script>
+    <!-- <script src="./assets/js/main.bundle.js"></script> -->
 
     <!-- <link rel="stylesheet" href="./assets/js/index.js"> -->
 </body>

@@ -1,8 +1,4 @@
 
-.w-375 {
-    max-width: 375px;
-    width: 100%;
-}
 
 header {
     height: 109px;
@@ -60,3 +56,16 @@ footer{
 }
 /* end users list */
 /* styles room end */
+.dot {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    left: 2px;
+    top:19px;
+    border: 1px solid black;
+    border-radius: 100%;
+    margin-right: 12px
+}
+.online{
+    background-color:#0fdc66
+}
